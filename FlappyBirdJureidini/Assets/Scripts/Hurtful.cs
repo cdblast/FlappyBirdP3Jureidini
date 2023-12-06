@@ -18,10 +18,10 @@ public class Hurtful : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other)
     {
-        FlappyController controller = other.GetComponent<float>();
+        FlappyController controller = other.GetComponent<FlappyController>();
         if (controller != null)
         {
-            controller.ChangeHealth(-1);
+            controller.isDead = true;
         }
     }
 }

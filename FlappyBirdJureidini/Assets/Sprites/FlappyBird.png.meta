@@ -44,7 +44,7 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
+  spriteExtrude: 0
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -1172,6 +1172,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: CompanionCube
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 163
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b1b51bd9541b2047b168ca0adb00cec
+      internalID: 694599077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1206,6 +1227,7 @@ TextureImporter:
       CoinNickel: 730015328
       CoinPenny: 109639233
       CoinSilver: 371935115
+      CompanionCube: 694599077
       FlappyBirdBLUE_0: 726514516
       FlappyBirdBLUE_1: -2117539876
       FlappyBirdGREY_0: 2125628567

@@ -10,47 +10,37 @@ public class FlappyController : MonoBehaviour
     private Rigidbody2D rigidbody2d;
     public float upForce = 200f;
 
-    public int health {  get { return currentHealth; } }
-    int currentHealth;
+    public bool isDead = false;
 
-    public float timeInvincible = 2.0f;
-    bool isInvincible;
-    float invincibleTimer;
-
-
+    Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
-
-        currentHealth = maxHealth;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (maxHealth > 0)
+        if (isDead == false)
         {
             if (Input.GetMouseButtonDown(0))
             {
                 rigidbody2d.velocity = Vector2.zero;
                 rigidbody2d.AddForce(new Vector2(0, upForce));
+
+                animator.SetTrigger("Launch");
             }
         }
     }
 
-    public void ChangeHealth(int amount)
+    private void OnCollisionEnter2D()
     {
-        if (amount < 0)
-        {
-            if (isInvincible)
-                return;
-            isInvincible = true;
-            invincibleTimer = timeInvincible;
-        }
-
-
+        isDead = true;
+        Debug.Log("isDead true");
+        animator.SetTrigger("Die");
     }
 }
