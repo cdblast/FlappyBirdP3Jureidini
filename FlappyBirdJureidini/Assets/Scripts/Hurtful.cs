@@ -15,4 +15,13 @@ public class Hurtful : MonoBehaviour
     {
         
     }
+
+    void OnTriggerStay2D(Collider2D other)
+    {
+        FlappyController controller = other.GetComponent<float>();
+        if (controller != null)
+        {
+            controller.ChangeHealth(-1);
+        }
+    }
 }
