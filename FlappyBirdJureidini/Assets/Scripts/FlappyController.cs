@@ -32,7 +32,7 @@ public class FlappyController : MonoBehaviour
                 rigidbody2d.velocity = Vector2.zero;
                 rigidbody2d.AddForce(new Vector2(0, upForce));
 
-                animator.SetTrigger("Launch");
+                animator.SetTrigger("Flap");
             }
         }
     }
