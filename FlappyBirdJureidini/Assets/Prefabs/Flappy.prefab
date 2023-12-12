@@ -130,6 +130,7 @@ MonoBehaviour:
   maxHealth: 1
   upForce: 200
   isDead: 0
+  GameOverText: {fileID: 0}
 --- !u!61 &-4189595001101335193
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -183,7 +184,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8099991434079008618}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 93429f3f57983264bb5dd209af336e3a, type: 2}
   m_CullingMode: 0

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FlappyController : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class FlappyController : MonoBehaviour
     public bool isDead = false;
 
     Animator animator;
+    public GameObject GameOverText;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,10 @@ public class FlappyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isDead == true && Input.GetMouseButtonDown(0))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
 
         if (isDead == false)
         {
@@ -42,5 +48,6 @@ public class FlappyController : MonoBehaviour
         isDead = true;
         Debug.Log("isDead true");
         animator.SetTrigger("Die");
+        GameOverText.SetActive(true);
     }
 }
