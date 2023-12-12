@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ScrollingObject : MonoBehaviour
 {
+    public FlappyController controller;
     private Rigidbody2D rigidbody2d;
     public float scrollSpeed = -1.5f;
     // Start is called before the first frame update
@@ -16,6 +17,9 @@ public class ScrollingObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (isDead == true)
+        if (controller.isDead == true)
+        {
+            rigidbody2d.velocity = Vector2.zero;
+        }
     }
 }
