@@ -4,6 +4,8 @@ using System.Diagnostics.CodeAnalysis;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 public class FlappyController : MonoBehaviour
 {
@@ -11,10 +13,13 @@ public class FlappyController : MonoBehaviour
     private Rigidbody2D rigidbody2d;
     public float upForce = 200f;
 
+    public int Score = 0;
+
     public bool isDead = false;
 
     Animator animator;
     public GameObject GameOverText;
+    public Text scoreText;
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +48,15 @@ public class FlappyController : MonoBehaviour
         }
     }
 
+    public void BirdScored()
+    {
+        if (isDead == false)
+        {
+            return;
+        }
+        Score++;
+        scoreText.text = "Score: " + Score.ToString();
+    }
     private void OnCollisionEnter2D()
     {
         isDead = true;
