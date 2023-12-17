@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4183268820647815876}
   - component: {fileID: 2875303186203354165}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Asteroid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,10 +25,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1060573401178042659}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.10489967, y: -0.18483204, z: 0.26693353, w: 0.93998915}
+  m_LocalRotation: {x: 0.104901485, y: -0.18483612, z: 0.2669377, w: 0.939987}
   m_LocalPosition: {x: -2.515, y: -2.068, z: 0.006}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 17.211, y: -17.767, z: 28.997}

@@ -13,8 +13,6 @@ public class FlappyController : MonoBehaviour
     private Rigidbody2D rigidbody2d;
     public float upForce = 200f;
 
-    public int Score = 0;
-
     public bool isDead = false;
 
     Animator animator;
@@ -48,15 +46,6 @@ public class FlappyController : MonoBehaviour
         }
     }
 
-    public void BirdScored()
-    {
-        if (isDead == false)
-        {
-            return;
-        }
-        Score++;
-        scoreText.text = "Score: " + Score.ToString();
-    }
     private void OnCollisionEnter2D()
     {
         isDead = true;

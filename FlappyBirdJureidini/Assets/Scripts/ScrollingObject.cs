@@ -4,22 +4,18 @@ using UnityEngine;
 
 public class ScrollingObject : MonoBehaviour
 {
-    public FlappyController controller;
-    private Rigidbody2D rigidbody2d;
-    public float scrollSpeed = -1.5f;
-    // Start is called before the first frame update
+    private Rigidbody2D rb2d;
     void Start()
     {
-        rigidbody2d = GetComponent<Rigidbody2D>();
-        rigidbody2d.velocity = new Vector2 (scrollSpeed, 0);
+        rb2d = GetComponent<Rigidbody2D>();
+        rb2d.velocity = new Vector2(GameControl.instance.scrollSpeed, 0);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (controller.isDead == true)
+        if (GameControl.instance.gameOver == true)
         {
-            rigidbody2d.velocity = Vector2.zero;
+            rb2d.velocity = Vector2.zero;
         }
     }
 }
